@@ -7,6 +7,7 @@ import LogoTitle from '../components/Elements/LogoTitle';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Context } from '../context/myContext';
+import { urlServer } from '../api/apiMyAnimeList';
 
 const Register = () => {
   const { darkMode } = useContext(Context);
@@ -21,7 +22,6 @@ const Register = () => {
   const [textAlert, setTextAlert] = useState('');
   const [textLoading, setTextLoading] = useState('create');
   const [role, setRole] = useState('User');
-  const url = 'https://cute-tan-jaguar-cap.cyclic.cloud';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ const Register = () => {
       return;
     }
     try {
-      const response = await fetch(`${url}/users`, {
+      const response = await fetch(`${urlServer}/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -6,9 +6,9 @@ import { useState } from 'react';
 import Footer from '../components/Templates/Footer';
 import { Context } from '../context/myContext';
 import { stringAvatar } from '../utils/utilAvatar';
+import { urlServer } from '../api/apiMyAnimeList';
 
 const UserList = () => {
-  const url = 'https://cute-tan-jaguar-cap.cyclic.cloud';
   const { statusLogin, setStatusLogin, darkMode } = useContext(Context);
   const [name, setName] = useState('');
   const [token, setToken] = useState('');
@@ -19,7 +19,7 @@ const UserList = () => {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get(`${url}/token`, {
+      const response = await axios.get(`${urlServer}/token`, {
         withCredentials: true,
       });
       const decoded = jwtDecode(response.data.accessToken);
@@ -41,7 +41,7 @@ const UserList = () => {
       setIsLoading(true);
       const currentDate = new Date();
       if (expire * 1000 < currentDate.getTime()) {
-        const response = await axios.get(`${url}/token`);
+        const response = await axios.get(`${urlServer}/token`);
         config.headers.Authorization = `Bearer ${response.data.accessToken}`;
         setToken(response.data.accessToken);
         const decoded = jwtDecode(response.data.accessToken);
@@ -58,7 +58,7 @@ const UserList = () => {
 
   const auth = async () => {
     try {
-      const response = await axiosJwt.get(`${url}/users`, {
+      const response = await axiosJwt.get(`${urlServer}/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

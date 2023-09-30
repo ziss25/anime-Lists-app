@@ -8,6 +8,7 @@ import jwtDecode from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../context/myContext';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { urlServer } from '../api/apiMyAnimeList';
 
 const EditProfile = () => {
   const { darkMode } = useContext(Context);
@@ -24,11 +25,10 @@ const EditProfile = () => {
   const [nameErrorText, setNameError] = useState(false);
   const [desErrorText, setDesError] = useState(false);
   const { openProfilePopUp, setOpenProfilePopUp } = useContext(Context);
-  const url = 'https://cute-tan-jaguar-cap.cyclic.cloud';
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`${url}/token`, {
+      const response = await axios.get(`${urlServer}/token`, {
         withCredentials: true,
       });
       const decodedToken = await jwtDecode(response.data.accessToken);
@@ -45,7 +45,7 @@ const EditProfile = () => {
     const formData = new FormData();
     formData.append('file', images);
     return axios
-      .patch(`${url}/users/avatar/${id}`, formData, {
+      .patch(`${urlServer}/users/avatar/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -57,7 +57,7 @@ const EditProfile = () => {
   const nameUpdate = async () => {
     return axios
       .patch(
-        `${url}/users/username/${id}`,
+        `${urlServer}/users/username/${id}`,
         {
           newname: name,
         },
@@ -74,7 +74,7 @@ const EditProfile = () => {
   const descriptionUpdate = async () => {
     return axios
       .patch(
-        `${url}/users/description/${id}`,
+        `${urlServer}/users/description/${id}`,
         {
           description: description,
         },

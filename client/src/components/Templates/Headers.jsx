@@ -9,6 +9,7 @@ import { Avatar } from '@mui/material';
 import { stringAvatar } from '../../utils/utilAvatar';
 import ProfilePopUp from '../Elements/ProfilePopUp';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { urlServer } from '../../api/apiMyAnimeList';
 import axios from 'axios';
 
 const Headers = () => {
@@ -26,7 +27,7 @@ const Headers = () => {
 
   const getToken = async () => {
     try {
-      const response = await axios.get('https://cute-tan-jaguar-cap.cyclic.cloud/token', {
+      const response = await axios.get(urlServer, {
         withCredentials: true,
       });
       setToken(response.data.accessToken);

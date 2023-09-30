@@ -9,7 +9,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import bg2 from '../assets/demon-slayer-1.png';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Context } from '../context/myContext';
-
+import { urlServer } from '../api/apiMyAnimeList';
 const ProfileUser = () => {
   const { darkMode } = useContext(Context);
   const location = useLocation();
@@ -18,11 +18,10 @@ const ProfileUser = () => {
   const [avatar, setAvatar] = useState('');
   const [description, setDescription] = useState('');
   const [loadingResources, setLoadingResources] = useState(true);
-  const url = 'https://cute-tan-jaguar-cap.cyclic.cloud';
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`${url}/token`, {
+      const response = await axios.get(`${urlServer}/token`, {
         withCredentials: true,
       });
       const decodedToken = await jwtDecode(response.data.accessToken);

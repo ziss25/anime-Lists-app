@@ -3,6 +3,7 @@ import axios from 'axios';
 const maxRetries = 3; // Maximum number of retry attempts
 const delayBetweenRetries = 3000; // Delay in milliseconds before retrying (3 seconds)
 const baseUrl = 'https://api.jikan.moe/v4';
+const urlServer = 'http://localhost:5000';
 
 // promises handle -- limit request
 function makeRequestWithRetry(url, maxRetries, delay) {
@@ -114,7 +115,7 @@ const fetchAnimesbgFilter = async (filter = '', currentPage) => {
 //   }
 // };
 
-export { fetchAnimesTopRated, fetchAnimesUpComing, fetchAnimesSeasonNow, fetchAnimesById, fetchAnimesTopByFavorite, fetchAnimesPicturesById, fetchAnimesSeasonsList, fetchAnimesSeasons, fetchAnimesbgFilter };
+export { fetchAnimesTopRated, fetchAnimesUpComing, fetchAnimesSeasonNow, fetchAnimesById, fetchAnimesTopByFavorite, fetchAnimesPicturesById, fetchAnimesSeasonsList, fetchAnimesSeasons, fetchAnimesbgFilter, urlServer };
 
 // kalo ada pesan ini .... walapaun erorr tapi ia reject dan request lagi
 // Failed to load resource: the server responded with a status of 429 (Too Many Requests)

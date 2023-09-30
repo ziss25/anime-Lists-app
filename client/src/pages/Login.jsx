@@ -6,6 +6,7 @@ import LogoTitle from '../components/Elements/LogoTitle';
 import axios from 'axios';
 import AlertErorr from '../components/Elements/AlertErorr';
 import { Context } from '../context/myContext';
+import { urlServer } from '../api/apiMyAnimeList';
 
 const Login = () => {
   const { darkMode } = useContext(Context);
@@ -20,14 +21,12 @@ const Login = () => {
   const { setOpenProfilePopUp } = useContext(Context);
   const { statusLogin, setStatusLogin } = useContext(Context);
 
-  const url = 'https://cute-tan-jaguar-cap.cyclic.cloud';
-
   const auth = async (e) => {
     e.preventDefault();
     setTextButton('loading...');
 
     try {
-      const response = await fetch(`${url}/login`, {
+      const response = await fetch(`${urlServer}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,6 +60,10 @@ const Login = () => {
       setTextButton('login');
     }
   };
+
+  useEffect(() => {
+    console.log(urlServer);
+  }, []);
 
   return (
     <>
