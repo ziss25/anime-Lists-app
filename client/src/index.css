@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* costum or utils */
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: rgb(255, 0, 0);
+}
+
+/* track scroll */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 10px 10px 5px black;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.typograpy-oveflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.typograpy-oveflow--line1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.typograpy-overflow-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+} */
+
+.myCards {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+}
+
+.myCardsTop {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+}
+
+/* custom style navigation swiper */
+/* .swiper-button-next,
+.swiper-button-prev {
+  padding: 2rem 3rem;
+  background-color: red;
+  transform: scale(0.4);
+  border-radius: 1rem;
+  top: 40%;
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* header */
+  .header {
+    @apply fixed flex h-14 top-0 right-0 left-0 px-7 z-30 text-white bg-transparent justify-between items-center 2xl:h-20;
+  }
+  .header--light {
+    @apply fixed flex h-14 top-0 right-0 left-0 px-7 z-30 text-white bg-transparent justify-between items-center 2xl:h-20;
+  }
+  .header-active-light {
+    @apply fixed flex h-14 top-0 right-0 left-0 px-7 z-30 text-white justify-between items-center bg-white;
+  }
+  .header-active-navigate {
+    @apply fixed flex h-14 top-0 right-0 left-0 px-7 z-30 text-white  justify-between items-center bg-black;
+  }
+
+  /*  menuNavbarMobile */
+  .menuNavbarMobile {
+    @apply md:hidden fixed z-50 bg-gray-800 w-5/6 top-0 -left-[1000px] bottom-0 text-white transition-all duration-500;
+  }
+  .menuNavbarMobile--light {
+    @apply md:hidden fixed z-50 bg-white  w-5/6 top-0 -left-[1000px] bottom-0 text-black transition-all duration-500;
+  }
+  .menuNavbar_active {
+    @apply left-0 transition-all duration-500;
+  }
+
+  /* hero */
+  .hero {
+    @apply w-screen h-screen bg-cover bg-no-repeat bg-left-top relative flex items-center px-5 top-0 md:h-[50vmax];
+  }
+  .hero__layer--full {
+    @apply bg-gradient-to-r  from-black to-transparent absolute top-0 right-0 left-0 bottom-0;
+  }
+  .hero__layer--bottomToTop {
+    @apply absolute bottom-0 right-0  left-0 h-64 z-20 bg-gradient-to-t from-black to-transparent;
+  }
+  .hero__layer--full--light {
+    @apply bg-gradient-to-r opacity-50 from-white to-transparent absolute top-0 right-0 left-0 bottom-0;
+  }
+  .hero__layer--bottomToTop--light {
+    @apply absolute bottom-0 right-0  left-0 h-64 z-20 bg-gradient-to-t from-white to-transparent;
+  }
+  .hero__context {
+    @apply relative z-10 text-white px-4 max-w-xl md:m-0 md:px-16 2xl:max-w-4xl;
+  }
+
+  /* sliderMaker */
+  .sliderMarker {
+    @apply w-12 h-8 absolute top-[42%] z-20 flex justify-center items-center;
+  }
+  .sliderMarker__right {
+    @apply -right-9;
+  }
+  .sliderMarker__left {
+    @apply -left-9;
+  }
+}
