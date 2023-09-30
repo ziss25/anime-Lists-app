@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { Sequelize } from 'sequelize';
+import { Sequelize } from 'sequelize.js';
 dotenv.config();
 
 // di intregasikan lewat cloud mysql -- FreeSQLdatabase
