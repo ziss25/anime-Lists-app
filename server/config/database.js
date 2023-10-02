@@ -10,6 +10,7 @@ dotenv.config();
 const db = new Sequelize('bapu8xktpif6wk3hyqdu', 'u78nlyfyynasja4h', 'qTYCEXrOLtWUGP9sIH2g', {
   host: 'bapu8xktpif6wk3hyqdu-mysql.services.clever-cloud.com',
   dialect: 'mysql',
+  dialectModule: require('mysql2'),
   port: 3306,
 });
 
