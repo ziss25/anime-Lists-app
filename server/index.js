@@ -18,9 +18,9 @@ const FileUpload = require('express-fileupload');
 
 dotenv.config();
 
-const domain = process.env.ORIGIN_DOMAIN == 'production;' ? 'https://animelist-ziss25.vercel.app' : 'http://localhost:5173';
+// const domain = process.env.ORIGIN_DOMAIN == 'production;' ? 'https://animelist-ziss25.vercel.app' : 'http://localhost:5173';
 
-console.log(domain);
+// console.log(domain);
 
 const app = express();
 
@@ -36,7 +36,7 @@ const app = express();
   }
 })();
 
-app.use(cors({ origin: domain, credentials: true }));
+app.use(cors({ origin: ['https://animelist-ziss25.vercel.app', 'http://localhost:5173'], credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(FileUpload());
