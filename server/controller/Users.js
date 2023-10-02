@@ -1,7 +1,12 @@
-import Users from '../models/UserModel.js';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import axios from 'axios';
+// import Users from '../models/UserModel.js';
+// import bcrypt from 'bcrypt';
+// import jwt from 'jsonwebtoken';
+// import axios from 'axios';
+
+const Users = require('../models/UserModel.js');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const axios = require('axios');
 
 const uploadImage = (img) => {
   let body = new FormData();
@@ -15,7 +20,7 @@ const uploadImage = (img) => {
   });
 };
 
-export const getUser = async (req, res) => {
+const getUser = async (req, res) => {
   try {
     const users = await Users.findAll({
       attributes: ['id', 'name', 'username', 'role', 'avatar_url', 'description'],
@@ -26,7 +31,7 @@ export const getUser = async (req, res) => {
   }
 };
 
-export const Register = async (req, res) => {
+const Register = async (req, res) => {
   const { name, username, password, confPassword, role, avatar_image, avatar_url, description } = req.body;
   if (password !== confPassword) return res.status(400).json({ msg: 'password dan confirmPassword tidak cocok' });
   const salt = await bcrypt.genSalt();
@@ -47,7 +52,7 @@ export const Register = async (req, res) => {
   }
 };
 
-export const Login = async (req, res) => {
+const Login = async (req, res) => {
   try {
     const user = await Users.findAll({
       where: {
@@ -114,7 +119,7 @@ export const Login = async (req, res) => {
   }
 };
 
-export const Logout = async (req, res) => {
+const Logout = async (req, res) => {
   const refreshToken = req.cookies.refreshToken;
   if (!refreshToken) return res.sendStatus(204);
   const user = await Users.findAll({
@@ -138,7 +143,7 @@ export const Logout = async (req, res) => {
   return res.sendStatus(200);
 };
 
-export const updateProfileAvatar = async (req, res) => {
+const updateProfileAvatar = async (req, res) => {
   try {
     // get data from api kita
     const imageFile = req.files.file;
@@ -166,7 +171,7 @@ export const updateProfileAvatar = async (req, res) => {
   }
 };
 
-export const updatename = async (req, res) => {
+const updatename = async (req, res) => {
   const user = await Users.findOne({
     where: {
       id: req.params.id,
@@ -188,7 +193,7 @@ export const updatename = async (req, res) => {
   }
 };
 
-export const updateDescription = async (req, res) => {
+const updateDescription = async (req, res) => {
   const description = req.body.description;
   try {
     await Users.update(
@@ -204,3 +209,11 @@ export const updateDescription = async (req, res) => {
     console.log(error.message);
   }
 };
+
+module.exports = getUser;
+module.exports = Register;
+module.exports = Login;
+module.exports = Logout;
+module.exports = updateProfileAvatar;
+module.exports = updatename;
+module.exports = updateDescription;

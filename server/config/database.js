@@ -1,5 +1,8 @@
-import dotenv from 'dotenv';
-import { Sequelize } from 'sequelize';
+// import dotenv from 'dotenv';
+// import { Sequelize } from 'sequelize';
+const dotenv = require('dotenv');
+const Sequelize = require('sequelize');
+
 dotenv.config();
 
 // di intregasikan lewat cloud mysql -- FreeSQLdatabase
@@ -15,11 +18,11 @@ const db = new Sequelize('bapu8xktpif6wk3hyqdu', 'u78nlyfyynasja4h', 'qTYCEXrOLt
 //   dialect: 'mysql',
 //   port: 3306,
 // });
-console.log({ name: process.env.DB_NAME, user: process.env.DB_USER, pass: process.env.DB_PASS });
+
 // const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
 //   host: 'bapu8xktpif6wk3hyqdu-mysql.services.clever-cloud.com',
 //   dialect: 'mysql',
 //   port: 3306,
 // });
 
-export default db;
+module.exports = db;
