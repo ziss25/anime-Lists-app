@@ -20,7 +20,6 @@ const Footer = () => {
           <ul className="flex justify-center mt-3 ">
             <IconButton
               href={'#'} //
-              target="_blank"
               rel="noopener noreferrer"
             >
               <FacebookIcon
@@ -36,8 +35,7 @@ const Footer = () => {
               />
             </IconButton>
             <IconButton
-              href={'https://api.whatsapp.com/send?phone=6281347435827&text=Hello'}
-              target="_blank" //
+              href={'https://api.whatsapp.com/send?phone=6281347435827&text=Hello'} //
               rel="noopener noreferrer"
             >
               <WhatsAppIcon
@@ -54,7 +52,6 @@ const Footer = () => {
             </IconButton>
             <IconButton
               href={'https://github.com/ziss25'} //
-              target="_blank"
               rel="noopener noreferrer"
             >
               <GitHubIcon
@@ -71,7 +68,6 @@ const Footer = () => {
             </IconButton>
             <IconButton
               href={'https://www.youtube.com/watch?v=C2Dj3NM80RM'} //
-              target="_blank"
               rel="noopener noreferrer"
             >
               <YouTubeIcon
