@@ -110,8 +110,8 @@ const Login = async (req, res) => {
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
+      secure: true, // Hanya dikirimkan melalui koneksi HTTPS yang aman
       // sameSite: 'lax', // Mengizinkan cookie dalam respons lintas situs
-      // secure: true, // Hanya dikirimkan melalui koneksi HTTPS yang aman
     });
     res.json({ accessToken });
   } catch (error) {
