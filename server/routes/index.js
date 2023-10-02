@@ -28,6 +28,11 @@ const {
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  const htmlResponse = '<html><body><h1>animeList-server run...!</h1></body></html>';
+  res.send(htmlResponse);
+});
+
 router.get('/users', verifyToken, getUser);
 router.post('/users', Register);
 router.post('/login', Login);
