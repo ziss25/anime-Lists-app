@@ -3,7 +3,7 @@ import axios from 'axios';
 const maxRetries = 3; // Maximum number of retry attempts
 const delayBetweenRetries = 3000; // Delay in milliseconds before retrying (3 seconds)
 const baseUrl = 'https://api.jikan.moe/v4';
-const urlServer = 'http://localhost:5000';
+const urlServer = 'animelist-server.vercel.app';
 
 // promises handle -- limit request
 function makeRequestWithRetry(url, maxRetries, delay) {
