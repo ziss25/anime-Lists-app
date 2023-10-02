@@ -210,10 +210,10 @@ const updateDescription = async (req, res) => {
   }
 };
 
-module.exports = getUser;
-module.exports = Register;
-module.exports = Login;
-module.exports = Logout;
-module.exports = updateProfileAvatar;
-module.exports = updatename;
-module.exports = updateDescription;
+exports.getUser = getUser;
+exports.Register = Register;
+exports.Login = Login;
+exports.Logout = Logout;
+exports.updateProfileAvatar = updateProfileAvatar;
+exports.updatename = updatename;
+exports.updateDescription = updateDescription;

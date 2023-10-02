@@ -14,13 +14,17 @@
 const express = require('express');
 const verifyToken = require('../middleware/VerifyToken.js');
 const refreshToken = require('../controller/refreshToken.js');
-const getUser = require('../controller/Users.js');
-const Register = require('../controller/Users.js');
-const Login = require('../controller/Users.js');
-const Logout = require('../controller/Users.js');
-const updateProfileAvatar = require('../controller/Users.js');
-const updatename = require('../controller/Users.js');
-const updateDescription = require('../controller/Users.js');
+const user = require('../controller/Users.js');
+
+const {
+  getUser, //
+  Register,
+  Login,
+  Logout,
+  updateProfileAvatar,
+  updatename,
+  updateDescription,
+} = user;
 
 const router = express.Router();
 
