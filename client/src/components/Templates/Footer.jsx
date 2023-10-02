@@ -43,7 +43,6 @@ const Footer = () => {
                 sx={{
                   color: darkMode ? 'white' : 'black',
                   fontSize: 20,
-
                   '&:hover': {
                     color: '#FF0000',
                   },
