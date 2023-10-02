@@ -27,7 +27,7 @@ const Headers = () => {
 
   const getToken = async () => {
     try {
-      const response = await axios.get(urlServer, {
+      const response = await axios.get(`${urlServer}/token`, {
         withCredentials: true,
       });
       setToken(response.data.accessToken);
@@ -54,10 +54,6 @@ const Headers = () => {
   window.addEventListener('scroll', () => {
     setisScrollbg(window.scrollY);
   });
-
-  // useEffect(() => {
-  //   console.log(isScrollbg);
-  // }, [isScrollbg]);
 
   useEffect(() => {
     getToken();
