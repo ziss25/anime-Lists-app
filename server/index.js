@@ -18,7 +18,7 @@ const FileUpload = require('express-fileupload');
 
 dotenv.config();
 
-const domain = process.env.ORIGIN_DOMAIN == 'production;' ? 'https://anime-list-app-five.vercel.app' : 'http://localhost:5173';
+const domain = process.env.ORIGIN_DOMAIN == 'production;' ? 'https://animelist-ziss25.vercel.app' : 'http://localhost:5173';
 
 const app = express();
 
