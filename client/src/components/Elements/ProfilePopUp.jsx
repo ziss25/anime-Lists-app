@@ -11,6 +11,7 @@ import axios from 'axios';
 import Person2Icon from '@mui/icons-material/Person2';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Context } from '../../context/myContext';
+import { urlServer } from '../../api/apiMyAnimeList';
 
 const ProfilePopUp = ({ setOpenProfilePopUp, setToken }) => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const ProfilePopUp = ({ setOpenProfilePopUp, setToken }) => {
 
   const handleLogOut = () => {
     axios
-      .delete('https://cute-tan-jaguar-cap.cyclic.cloud/logout', {
+      .delete(`${urlServer}/logout`, {
         withCredentials: true,
       })
       .then((response) => {
