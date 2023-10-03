@@ -14,7 +14,7 @@ then the [client](#) and [server](#) folders must have their dependencies instal
 npm install
 ```
 
-initialize [Environment Variables](#), see below :
+initialize [Environment Variables](#) in [server](#), see below :
 
 ```env
 ORIGIN_DOMAIN_CLIENT =  // the client's domain URL
@@ -26,6 +26,12 @@ DB_PASS = // password name from the mysql database
 DB_HOST = // host name from the mysql database
 DB_PORT = // port from the mysql database
 
+```
+
+adjust the server url.. in the client/src/api/apiMyAnimeList in folder[client](#) and then edit it in the file :
+
+```js
+const urlServer = 'http://your-server'; // example
 ```
 
 # demo
