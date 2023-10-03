@@ -14,10 +14,18 @@ then the [client](#) and [server](#) folders must have their dependencies instal
 npm install
 ```
 
-init [Environment Variables](#) , see below :
+initialize [Environment Variables](#), see below :
 
 ```env
-hello = ansadsak
+ORIGIN_DOMAIN_CLIENT =  // the client's domain URL
+ACCESS_TOKEN_SECRET =  // random text ... asdsadawadasfafea
+REFRESH_TOKEN_SECRET = // random text .... sadadawdwdadwa3fwqaqdq2eg
+DB_NAME = // name from the mysql database
+DB_USER = // user  from the mysql database
+DB_PASS = // password name from the mysql database
+DB_HOST = // host name from the mysql database
+DB_PORT = // port from the mysql database
+
 ```
 
 # demo
