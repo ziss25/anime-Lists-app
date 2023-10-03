@@ -18,8 +18,8 @@ initialize [Environment Variables](#), see below :
 
 ```env
 ORIGIN_DOMAIN_CLIENT =  // the client's domain URL
-ACCESS_TOKEN_SECRET =  // random text ... asdsadawadasfafea
-REFRESH_TOKEN_SECRET = // random text .... sadadawdwdadwa3fwqaqdq2eg
+ACCESS_TOKEN_SECRET =  // random text ... example: aasdasafakklvqsdsadawadasfafea
+REFRESH_TOKEN_SECRET = // random text ... example: sadadawdwdadwaakdah3fwqaqdq2eg
 DB_NAME = // name from the mysql database
 DB_USER = // user  from the mysql database
 DB_PASS = // password name from the mysql database
