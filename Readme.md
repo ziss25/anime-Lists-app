@@ -34,6 +34,10 @@ adjust the server url.. in the client/src/api/apiMyAnimeList in folder [client](
 const urlServer = 'http://your-server'; // example
 ```
 
+```error
+anjay
+```
+
 Just run the [client](#) and [server](#)... and congratulations 👋👋
 
 # demo
