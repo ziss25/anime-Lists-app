@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 // more detail -- acount survingtesting@gmail.com
 const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
-  dialect: process.env.DB,
+  dialect: 'mysql',
   dialectModule: require('mysql2'),
   port: process.env.DB_PORT,
 });
