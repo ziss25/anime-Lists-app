@@ -1,6 +1,6 @@
 # soonFlix -- animeList app
 
-# install
+# start
 
 start download or clone my github
 
@@ -12,6 +12,12 @@ then the [client](#) and [server](#) folders must have their dependencies instal
 
 ```txt
 npm install
+```
+
+init [Environment Variables](#) , see below :
+
+```env
+hello = ansadsak
 ```
 
 # demo
