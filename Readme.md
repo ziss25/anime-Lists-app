@@ -56,6 +56,13 @@ visit the demo website here:
 https://animelist-ziss25.vercel.app
 ```
 
+# deploy
+
+To deploy, for now you can use the following....and this can deploy clients and servers
+
+- [netfly](#the-challenge)
+- [vercel](#screenshot)
+
 ## resorces build
 
 - [client](#overview)
