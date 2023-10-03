@@ -21,7 +21,7 @@ const app = express();
   }
 })();
 
-app.use(cors({ origin: process.env.ORIGIN_DOMAIN, credentials: true }));
+app.use(cors({ origin: process.env.ORIGIN_DOMAIN_CLIENT, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(FileUpload());
