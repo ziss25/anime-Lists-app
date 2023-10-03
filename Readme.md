@@ -1,5 +1,11 @@
 # soonFlix -- animeList app
 
+visit the demo website here:
+
+```txt
+https://animelist-ziss25.vercel.app
+```
+
 # preview
 
 ![Design preview for the animelist](./client/public/animelist.png)
@@ -42,7 +48,7 @@ Just run the [client](#) and [server](#) , To run it, it's usually in each packa
 
 # cors problem
 
-If there is a Cors error like this, don't worry, try changing the env section then pushing it to GitHub or not
+If there is a Cors error like this, don't worry, try changing the env section then pushing it to GitHub
 
 ![Design preview for the animelist](./client/public/animelist-error-cors.png)
 
@@ -58,14 +64,6 @@ To deploy, for now you can use the following....and this can deploy clients and 
 
 - [netfly](#the-challenge)
 - [vercel](#screenshot)
-
-# demo
-
-visit the demo website here:
-
-```txt
-https://animelist-ziss25.vercel.app
-```
 
 ## resorces build
 
