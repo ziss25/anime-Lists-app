@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const maxRetries = 3; // Maximum number of retry attempts
 const delayBetweenRetries = 3000; // Delay in milliseconds before retrying (3 seconds)
 const baseUrl = 'https://api.jikan.moe/v4';

@@ -11,16 +11,10 @@ const express = require('express');
 const db = require('./config/database.js');
 const Users = require('./models/UserModel.js');
 const router = require('./routes/index.js');
-const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const FileUpload = require('express-fileupload');
-
-dotenv.config();
-
-const domain = process.env.ORIGIN_DOMAIN == 'production;' ? 'https://animelist-ziss25.vercel.app' : 'http://localhost:5173';
-
-console.log(domain);
+require('dotenv').config();
 
 const app = express();
 
@@ -36,7 +30,7 @@ const app = express();
   }
 })();
 
-app.use(cors({ origin: domain, credentials: true }));
+app.use(cors({ origin: process.env.ORIGIN_DOMAIN, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(FileUpload());
