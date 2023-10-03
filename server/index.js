@@ -1,12 +1,3 @@
-// import express from 'express';
-// import db from './config/database.js';
-// import Users from './models/UserModel.js';
-// import router from './routes/index.js';
-// import dotenv from 'dotenv';
-// import cookieParser from 'cookie-parser';
-// import cors from 'cors';
-// import FileUpload from 'express-fileupload';
-
 const express = require('express');
 const db = require('./config/database.js');
 const Users = require('./models/UserModel.js');
