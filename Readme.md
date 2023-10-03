@@ -36,6 +36,8 @@ const urlServer = 'http://your-server'; // example
 
 Just run the [client](#) and [server](#) , To run it, it's usually in each package... and congratulations 👋👋
 
+# others
+
 If there is a Cors error like this, don't worry, try changing the env section then pushing it to GitHub or not, just change the domain_client in the file.
 ![Design preview for the animelist](./client/public/animelist-error-cors.png)
 
