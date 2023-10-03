@@ -1,5 +1,9 @@
 # soonFlix -- animeList app
 
+# preview
+
+![Design preview for the animelist](./client/public/animelist.png)
+
 # start
 
 start download or clone my github
@@ -48,6 +52,13 @@ but if it doesn't work, just change it in the server/index.js file
 app.use(cors({ origin: 'http:url-client', credentials: true }));
 ```
 
+# deploy
+
+To deploy, for now you can use the following....and this can deploy clients and servers
+
+- [netfly](#the-challenge)
+- [vercel](#screenshot)
+
 # demo
 
 visit the demo website here:
@@ -55,13 +66,6 @@ visit the demo website here:
 ```txt
 https://animelist-ziss25.vercel.app
 ```
-
-# deploy
-
-To deploy, for now you can use the following....and this can deploy clients and servers
-
-- [netfly](#the-challenge)
-- [vercel](#screenshot)
 
 ## resorces build
 
@@ -86,10 +90,6 @@ To deploy, for now you can use the following....and this can deploy clients and 
   - [sequlize](#what-i-learned)
   - [cookie-parser](#)
   - [cors](#)
-
-# preview
-
-![Design preview for the animelist](./client/public/animelist.png)
 
 ## Author
 
