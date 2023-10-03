@@ -8,7 +8,7 @@ start download or clone my github
 git clone https://github.com/ziss25/anime-Lists-app.git
 ```
 
-then the client and server folders must have their dependencies installed
+then the [client] and [server] folders must have their dependencies installed
 
 ```txt
 npm install
