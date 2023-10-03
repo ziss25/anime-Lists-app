@@ -28,11 +28,13 @@ DB_PORT = // port from the mysql database
 
 ```
 
-adjust the server url.. in the client/src/api/apiMyAnimeList in folder[client](#) and then edit it in the file :
+adjust the server url.. in the client/src/api/apiMyAnimeList in folder [client](#) and then edit it in the file :
 
 ```js
 const urlServer = 'http://your-server'; // example
 ```
+
+Just run the [client](#) and [server](#)... and congratulations 👋👋
 
 # demo
 
