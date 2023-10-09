@@ -3,7 +3,7 @@
 visit the demo website here:
 
 ```txt
-https://animelist-ziss25.vercel.app
+https://soonFlix-ziss25.vercel.app
 ```
 
 # preview
